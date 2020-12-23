@@ -6,7 +6,7 @@ from sklearn.kernel_approximation import RBFSampler
 
 class FeatureTransformer:
     def __init__(self, env):
-        observation_samples = np.array([[random.uniform(-10, 17), random.uniform(-25, 25), random.uniform(-2.6, 2.6), random.uniform(-30, 30)] for _ in range(1000)])
+        observation_samples = np.array([[random.uniform(-1.0, 1.7), random.uniform(-2.5, 2.5), random.uniform(-0.26, 0.26), random.uniform(-3.0, 3.0)] for _ in range(1000)])
         scaler = StandardScaler()
         scaler.fit(observation_samples)
         feature_union = FeatureUnion([
